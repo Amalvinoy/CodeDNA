@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_API_URL=${_NEXT_PUBLIC_API_URL}'
+      - '-t'
+      - '$_IMAGE_TAG'
+      - '.'
+images:
+  - '$_IMAGE_TAG'
+substitutions:
+  _NEXT_PUBLIC_API_URL: 'http://localhost:5001/api'
+  _IMAGE_TAG: 'gcr.io/${PROJECT_ID}/codedna-frontend:latest'
+options:
+  logging: CLOUD_LOGGING_ONLY

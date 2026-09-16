@@ -1,0 +1,21 @@
+{
+  "name": "code-dna",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Code DNA — The AI That Learns How You Code",
+  "scripts": {
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "build:frontend": "npm run build --prefix frontend",
+    "build:backend": "npm run build --prefix backend",
+    "lint:frontend": "npm run lint --prefix frontend",
+    "install:all": "npm install --prefix frontend && npm install --prefix backend"
+  },
+  "keywords": [
+    "code-dna",
+    "ai-code-reviewer",
+    "developer-intelligence"
+  ],
+  "author": "",
+  "license": "ISC"
+}
